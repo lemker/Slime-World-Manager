@@ -14,8 +14,9 @@ jdk:
    - oraclejdk8
 dist: trusty
 deploy:
-   provider: script
-   script: .travis/release.sh
+   provider: releases
+   api_key: "GITHUB OAUTH TOKEN"
+   file: "FILE TO UPLOAD"
    skip_cleanup: true
    on:
-    tags: true
+      tags: false
