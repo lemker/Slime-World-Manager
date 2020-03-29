@@ -14,11 +14,9 @@ jdk:
    - oraclejdk8
 dist: trusty
 deploy:
-   provider: releases
-   user: ${env.GITHUB_USERNAME}
-   password: ${env.GITHUB_TOKEN}
-   file: "2.2.0-SNAPSHOT"
+   provider: script
+   script: .travis/release.sh
    skip_cleanup: true
    on:
-      tags: false
-      branch: develop
+    tags: false
+    branch: develop
