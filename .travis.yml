@@ -19,4 +19,5 @@ deploy:
    file: "FILE TO UPLOAD"
    skip_cleanup: true
    on:
-      tags: false
+      tags: true
+      branch: develop
